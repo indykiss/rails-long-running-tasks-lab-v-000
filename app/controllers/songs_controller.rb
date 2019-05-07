@@ -8,13 +8,6 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
   end
 
-  def upload
-    CSV.foreach(params[:leads].path, headers: true) do |lead|
-     Customer.create(email: lead[0], first_name: lead[1], last_name: lead[2])
-   end
-    redirect_to songs_path
-  end
-
   def new
     @song = Song.new
   end
