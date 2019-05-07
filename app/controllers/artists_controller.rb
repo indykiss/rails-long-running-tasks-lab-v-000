@@ -10,7 +10,7 @@ class ArtistsController < ApplicationController
       Song.create(title: song[0], artist_id: song[1])
       Artist.find_or_create(name: song[1])
     end
-    redirect_to customers_path
+    redirect_to songs_path
   end 
 
   def new
