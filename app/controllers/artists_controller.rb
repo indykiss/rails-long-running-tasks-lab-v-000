@@ -5,6 +5,10 @@ class ArtistsController < ApplicationController
   def show
   end
 
+  def upload 
+
+  end 
+
   def new
     @artist = Artist.new
   end
